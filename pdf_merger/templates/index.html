@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Merger</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px 40px;
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      border: 2px dashed #cccccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>MERGE YOUR PDF's</h1><br>
+    <form method="post" action="/merge" enctype="multipart/form-data">
+      <div class="form-group my-2">
+        <label for="exampleFormControlFile1">Select your PDF file</label>
+        <input type="file" name="pdfs" class="form-control-file" id="exampleFormControlFile1" multiple accept=".pdf" />
+        <input class="btn btn-primary my-3" type="submit" value="submit" />
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
