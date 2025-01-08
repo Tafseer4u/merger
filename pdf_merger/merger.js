@@ -7,7 +7,7 @@ const mergepdfs = async (pdf1, pdf2) => {
   await merger.add(pdf1);
   await merger.add(pdf2);
   let d = new Date().getTime();
-  await merger.save(path.join(__dirname, `/public/${d}.pdf`))
+  await merger.save(`/public/${d}.pdf`)
     return d;
 };
 
