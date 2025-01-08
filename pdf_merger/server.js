@@ -24,7 +24,7 @@ app.post("/merge", upload.array("pdfs", 12), async (req, res) => {
     path.join(__dirname, req.files[1].path)
   );
 
-  res.redirect(`http://pdf-merger-p6fy.onrender.com/static//${d}.pdf`);
+  res.redirect(`http://pdf-merger-p6fy.onrender.com/static/${d}.pdf`);
 });
 
 app.listen(port, () => {
